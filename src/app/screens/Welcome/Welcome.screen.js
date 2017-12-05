@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Animated, Easing, Text, View } from 'react-native';
 import { LinearGradient } from 'expo';
 
+import { styleConfig } from '../../config';
 import logo from '../../../assets/images/logo.png';
 
 class WelcomeScreen extends Component {
@@ -43,7 +44,9 @@ class WelcomeScreen extends Component {
 
         return (
             <View style={containerStyle}>
-                <LinearGradient style={{ flex: 3 }} colors={['#150F73', '#3030A0']}>
+                <LinearGradient
+                    style={{ flex: 3 }}
+                    colors={[styleConfig.primaryDarkColor, styleConfig.primaryLightColor]}>
                     <View style={welcomeViewStyle}>
                         <Animated.Image source={logo} style={logoStyle} />
                         <Text style={titleStyle}>
@@ -83,7 +86,7 @@ const styles = {
     },
     titleStyle: {
         backgroundColor: 'transparent',
-        color: '#fff',
+        color: styleConfig.whiteColor,
         fontSize: 32,
         fontWeight: 'bold',
         marginTop: 15,
@@ -91,13 +94,13 @@ const styles = {
     },
     descriptionViewStyle: {
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: styleConfig.whiteColor,
         flex: 1,
         justifyContent: 'center',
         paddingHorizontal: 15
     },
     descriptionStyle: {
-        color: '#212529',
+        color: styleConfig.text.primaryColor,
         fontSize: 16,
         textAlign: 'center'
     },
