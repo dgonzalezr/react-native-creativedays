@@ -34,7 +34,7 @@ const styleConfig = {
     // Shadow
     shadow: {
         elevation: 2,
-        shadowOffset: { height: 0, width: 2 },
+        shadowOffset: { height: 2, width: 0 },
         shadowOpacity: 0.2,
         shadowRadius: 3,
         shadowColor: theme.blackColor
